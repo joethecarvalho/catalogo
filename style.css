@@ -1,0 +1,10 @@
+body { min-height: 100vh; }
+.summary-card { border: 0; box-shadow: 0 .125rem .5rem rgba(0,0,0,.06); }
+.description-pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: inherit;
+  margin: 0;
+}
+.table td:last-child { min-width: 270px; }
+.nav-pills .nav-link { border-radius: .375rem; }
