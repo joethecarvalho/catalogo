@@ -1,0 +1,18 @@
+<div class="card shadow-sm">
+  <div class="card-body p-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+      <div><h2 class="h4 mb-1">{{oficina.titulo}}</h2><span class="text-muted">Oficina #{{oficina.id}}</span></div>
+      {{#if oficina.inscricoesAbertas}}<span class="badge text-bg-success fs-6">Inscrições abertas</span>{{else}}<span class="badge text-bg-secondary fs-6">Inscrições encerradas</span>{{/if}}
+    </div>
+    <dl class="row">
+      <dt class="col-sm-3">Responsável</dt><dd class="col-sm-9">{{oficina.responsavel}}</dd>
+      <dt class="col-sm-3">Carga horária</dt><dd class="col-sm-9">{{oficina.cargaHoraria}} horas</dd>
+      <dt class="col-sm-3">Descrição</dt><dd class="col-sm-9"><pre class="description-pre">{{oficina.descricao}}</pre></dd>
+      <dt class="col-sm-3">Inscrições</dt><dd class="col-sm-9">{{formatStatus oficina.inscricoesAbertas}}</dd>
+    </dl>
+    <div class="d-flex flex-wrap gap-2 mt-3">
+      <a class="btn btn-primary" href="/oficinas/{{oficina.id}}/editar">Editar</a>
+      <a class="btn btn-outline-secondary" href="/">Voltar à listagem</a>
+    </div>
+  </div>
+</div>
